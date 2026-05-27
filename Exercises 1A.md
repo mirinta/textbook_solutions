@@ -218,7 +218,7 @@ We have $a^2 = b^2$ and $2ab = 1$.
 
 Let $a = b$, then $a = b = \frac{1}{\sqrt{2}}$, means $z_1 = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}i$ is a square root of $i$.
 
-Let $z_2 = -z_1 = -\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}i$, then ${z_2}^2 = {z_1}^2 = i$, means $z_2 = -\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}i$ is another square root of i.
+Let $z_2 = -z_1 = -\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}i$, then ${z_2}^2 = {z_1}^2 = i$, means $z_2 = -\frac{1}{\sqrt{2}} - \frac{1}{\sqrt{2}}i$ is another square root of $i$.
 
 ---
 
