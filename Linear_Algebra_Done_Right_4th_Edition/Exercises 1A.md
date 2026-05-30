@@ -7,13 +7,13 @@
 Let $\alpha = x + yi$, $\beta = p + qi$, where $x, y, p, q \in \mathbf{R}$, then
 
 $$
-\begin{aligned} 
+\begin{aligned}
 
-\alpha + \beta 
+\alpha + \beta
 
-&= (x + p) + (y + q)i \\ 
+&= (x + p) + (y + q)i \\
 
-&= (p + x) + (q + y)i \\ 
+&= (p + x) + (q + y)i \\
 
 &= \beta + \alpha
 
@@ -29,15 +29,15 @@ Let $\alpha = x + yi$, $\beta = p + qi$, $\lambda = a + bi$, where $x, y, p, q, 
 $$
 \begin{aligned}
 
-(\alpha + \beta) + \lambda 
+(\alpha + \beta) + \lambda
 
 &= [(x + p) + (y + q)i] + a + bi \\
 
-&= (x + p) + a + [(y + q) + b]i \\ 
+&= (x + p) + a + [(y + q) + b]i \\
 
 &= x + (p + a) + [y + (q + b)]i \\
 
-&= x + yi + [(p + a) + (q + b)i] \\ 
+&= x + yi + [(p + a) + (q + b)i] \\
 
 &= \alpha + (\beta + \lambda)
 
@@ -72,7 +72,7 @@ $$
 &= \alpha (\beta \lambda)
 
 \end{aligned}
-$$ 
+$$
 
 ---
 
@@ -87,13 +87,13 @@ $$
 
 &= (a + bi)[(x + p) + (y + q)i] \\
 
-&= ax + ap + bxi + bpi + ay i + aqi - by - bq \\ 
+&= ax + ap + bxi + bpi + ay i + aqi - by - bq \\
 
 &= (ax + ayi + bxi - by) + (ap + bpi + aqi - bq) \\
 
 &= (ax + ayi + bxi + bi yi) + (ap + bpi + aqi + bi qi) \\
 
-&= [a(x + yi) + bi(x + yi)] + [a(p + qi) + bi(p + qi)] \\ 
+&= [a(x + yi) + bi(x + yi)] + [a(p + qi) + bi(p + qi)] \\
 
 &= [(a + bi)(x + yi)] + [(a + bi)(p + qi)] \\
 
@@ -129,7 +129,7 @@ Assume there exists another $\beta' \in \mathbf{C}$ such that $\alpha + \beta' =
 $$
 \begin{aligned}
 
-\beta 
+\beta
 
 &= \beta + 0 \\
 
@@ -161,21 +161,21 @@ $$
 
 &= \frac{x^2}{x^2 + y^2} - \frac{xy}{x^2 + y^2}i + \frac{xy}{x^2 + y^2}i + \frac{y^2}{x^2 + y^2} \\
 
-&= \frac{x^2 + y^2}{x^2 + y^2} \\ 
+&= \frac{x^2 + y^2}{x^2 + y^2} \\
 
 &= 1
 
 \end{aligned}
 $$
 
-Assume there exists another $\beta' \in \mathbf{C}$ such that $\alpha \beta' = 1$, then 
+Assume there exists another $\beta' \in \mathbf{C}$ such that $\alpha \beta' = 1$, then
 
 $$
 \begin{aligned}
 
-\beta' 
+\beta'
 
-&= \beta' 1 \\ 
+&= \beta' 1 \\
 
 &= \beta' (\alpha \beta) \\
 
@@ -278,7 +278,7 @@ $$
 \end{aligned}
 $$
 
-However, 
+However,
 
 $$
 \begin{aligned}
@@ -320,7 +320,7 @@ Let $x = (x_1, ..., x_n)$, where $x_i \in \mathbf{F}$ for $i = 1, 2, ..., n$, th
 
 $$
 \begin{aligned}
-(ab)x 
+(ab)x
 
 &= ((ab)x_1, ..., (ab)x_n) \\
 
