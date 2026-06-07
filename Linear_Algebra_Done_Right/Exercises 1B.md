@@ -61,6 +61,8 @@ v + 3x
 
 &= v + (w + (-v)) \\
 
+&= v + ((-v) + w) \\
+
 &= (v + (-v)) + w \\
 
 &= w
@@ -68,7 +70,7 @@ v + 3x
 \end{aligned}
 $$
 
-Suppose $x'$ also satisfies $v + 3x' = w$, then
+Assume there is another $x' \in V$ such that $v + 3x' = w$, then
 
 $$
 \begin{aligned}
@@ -191,7 +193,7 @@ $$
 
 &= f(x) + g(x) \\
 
-&= g(x) + f(x) \\
+&= g(x) + f(x) \text{, according to the commutativity of addition in } V\\
 
 &= (g + f)(x)
 
@@ -209,9 +211,9 @@ $$
 
 &= (f + g)(x) + h(x) \\
 
-&= f(x) + g(x) + h(x) \\
+&= (f(x) + g(x)) + h(x) \\
 
-&= f(x) + (g(x) + h(x)) \\
+&= f(x) + (g(x) + h(x)) \text{, according to the associativity of addition } in V \\
 
 &= f(x) + (g + h)(x) \\
 
@@ -221,7 +223,7 @@ $$
 
 &= (ab)f(x) \\
 
-&= a(bf(x)) \\
+&= a(bf(x)) \text{, according to the associativity of scalar multiplication in } V \\
 
 &= a((bf)(x)) \\
 
@@ -232,7 +234,7 @@ $$
 
 **Additive identity:**
 
-Since $V$ is a vector space over $\mathbf{F}$, then let $0$ be the function in $V^S$ such that $0(x)$ is the additive identity in $V$ for all $x \in S$.
+Let $0$ be the function in $V^S$ such that $0(x)$ is the additive identity in $V$ for all $x \in S$.
 
 For all $f \in V^S$ and for all $x \in S$, we have
 
@@ -246,7 +248,7 @@ $$
 
 **Additive inverse:**
 
-Since $V$ is a vector space over $\mathbf{F}$, then for all $f \in V^S$ and $x \in S$, there exists $g \in V^S$ such that $g(x) \in V$ and $g(x)$ is the additive inverse of $f(x)$.
+For every $f \in V^S$, let $g$ be the function in $V^S$ such that $g(x)$ is the additive inverse of $f(x)$.
 
 $$
 \begin{aligned}
@@ -256,9 +258,11 @@ $$
 \end{aligned}
 $$
 
+for all $x \in S$.
+
 **Multiplicative identity:**
 
-Since $V$ is a vector space over $\mathbf{F}$, then let $1$ be the function in $V^S$ such that $1(x)$ is the multiplication identity in $V$ for all $x \in S$.
+For all $f \in V^S$ and for all $x \in S$,
 
 $$
 \begin{aligned}
@@ -281,7 +285,7 @@ $$
 
 &= a(f(x) + g(x)) \\
 
-&= af(x) + ag(x) \\
+&= af(x) + ag(x) \text{, according to the distributive properties in } V \\
 
 &= (af)(x) + (ag)(x) \\
 
@@ -291,7 +295,7 @@ $$
 
 &= (a + b)f(x) \\
 
-&= af(x) + bf(x) \\
+&= af(x) + bf(x) \text{, according to the distributive properties in } V \\
 
 &= (af)(x) + (bf)(x) \\
 
@@ -323,7 +327,7 @@ $$
 
 &= (u_1 + u_2) + i(v_1 + v_2) \\
 
-&= (u_2 + u_1) + i(v_2 + v_1) \\
+&= (u_2 + u_1) + i(v_2 + v_1) \text{, according to the commutativity of addition in } V \\
 
 &= (u_2 + iv_2) + (u_1 + iv_1)
 
@@ -339,27 +343,31 @@ $$
 
 ((u_1 + iv_1) + (u_2 + iv_2)) + (u_3 + iv_3)
 
-&= (u_1 + u_2) + i(v_1 + v_2) + u_3 + iv_3 \\
+&= ((u_1 + u_2) + i(v_1 + v_2)) + (u_3 + iv_3) \\
 
-&= u_1 + (u_2 + u_3) + i(v_1 + (v_2 + v_3)) \\
+&= ((u_1 + u_2) + u_3) + i((v_1 + v_2) + v_3) \\
 
-&= (u_1 + iv_1) + ((u_2 + u_3) + i(v_2 + v_3)) \\ \\
+&= (u_1 + (u_2 + u_3)) + i(v_1 + (v_2 + v_3)) \text{, according to the associativity of addition in } V \\
+
+&= (u_1 + iv_2) + ((u_2 + u_3) + i(v_2 + v_3)) \\
+
+&= (u_1 + iv_1) + ((u_2 + iv_2) + (u_3 + iv_3)) \\
+
+\\
 
 ((a_1 + ib_1)(a_2 + ib_2))(u + iv)
 
-&= ((a_1a_2 - b_1b_2) + i(a_1b_2 + a_2b_1))(u + iv) \\
+&= ((a_1a_2 - b_1b_2) + i(a_1b_2 + b_1a_2))(u + iv) \\
 
-&= ((a_1a_2 - b_1b_2)u - (a_1b_2 + a_2b_1)v) + i((a_1a_2 - b_1b_2)v + (a_1b_2 + a_2b_1)u) \\
+&= ((a_1a_2 - b_1b_2)u - (a_1b_2 + b_1a_2)v) + i((a_1a_2 - b_1b_2)v + (a_1b_2 + b_1a_2)u) \\
 
-&= (a_1a_2u - b_1b_2u - a_1b_2v - a_2b_1v) + i(a_1a_2v - b_1b_2v + a_1b_2u + a_2b_1u) \\
+&= ((a_1a_2)u - (b_1b_2)u - (a_1b_2)v - (b_1a_2)v) + i((a_1a_2)v - (b_1b_2)v + (a_1b_2)u + (b_1a_2)u) \\
 
-&= a_2u(a_1 + ib_1) - b_1b_2u - b_2v(a_1 + ib_1) - a_2b_1v + ia_1a_2v+ ia_1b_2u \\
+&= (a_1(a_2u) - b_1(b_2u) - a_1(b_2v) - b_1(a_2v)) + i(a_1(a_2v) - b_1(b_2v) + a_1(b_2u) + b_1(a_2u)) \text{, according to the associativity of scalar multiplication in } V \\
 
-&= (a_1 + ib_1)(a_2u - b_2v) + ib_2u(a_1 + ib_1) + ia_2v(a_1 + ib_1) \\
+&= (a_1(a_2u - b_2v) - b_1(b_2u + a_2v)) + i(a_1(b_2u + a_2v) + b_1(a_2u - b_2v)) \text{, according to the commutativity of addition and the distributive properties in } V \\
 
-&= (a_1 + ib_1)(a_2u - b_2v + ib_2u + ia_2v) \\
-
-&= (a_1 + ib_1)(u(a_2 + ib_2) + iv(a_2 + ib_2)) \\
+&= (a_1 + ib_1)((a_2u - b_2v) + i(b_2u + a_2v)) \\
 
 &= (a_1 + ib_1)((a_2 + ib_2)(u + iv))
 
@@ -370,9 +378,7 @@ for all $u, v, u_1, v_1, u_2, v_2, u_3, v_3 \in V$ and for all $a_1, b_1, a_2, b
 
 **Additive identity:**
 
-Since $V$ is a vector space, then let $0$ be the additive identity in $V$.
-
-For all $u, v \in V$, we have
+For all $u, v \in V$,
 
 $$
 \begin{aligned}
@@ -390,7 +396,7 @@ which means $0 + i0$ is the additive identity in $V_C$.
 
 **Additive inverse:**
 
-Since $V$ is a vector space, then for all $u, v \in V$, let $(-u), (-v) \in V$ be the additive inverse of $u$ and $v$, respectively.
+For every $u, v \in V$, let $(-u), (-v) \in V$ be the additive inverse of $u$ and $v$, respectively.
 
 We have
 
@@ -424,8 +430,6 @@ $$
 \end{aligned}
 $$
 
-where $0, 1 \in \mathbf{R}$.
-
 **Distributive properties:**
 
 $$
@@ -437,11 +441,15 @@ $$
 
 &= (a(u_1 + u_2) - b(v_1 + v_2)) + i(a(v_1 + v_2) + b(u_1 + u_2)) \\
 
-&= au_1 + au_2 - bv_1 - bv_2 + iav_1 + iav_2 + ibu_1 + ibu_2 \\
+&= (au_1 + au_2 - bv_1 - bv_2) + i(av_1 + av_2 + bu_1 + bu_2) \\
 
-&= a(u_1 + iv_1) + a(u_2 + iv_2) + ib(u_1 + iv_1) + ib(u_2 + iv_2) \\
+&= ((au_1 - bv_1) + (au_2 - bv_2)) + i((av_1 + bu_1) + (av_2 + bu_2)) \\
 
-&= (a + ib)(u_1 + iv_1) + (a + ib)(u_2 + iv_2) \\ \\
+&= ((au_1 - bv_1) + i(av_1 + bu_1)) + ((au_2 - bv_2) + i(av_2 + bu_2)) \\
+
+&= (a + ib)(u_1 + iv_1) + (a + ib)(u_2 + iv_2) \\
+
+\\
 
 ((a_1 + ib_1) + (a_2 + ib_2))(u + iv)
 
@@ -449,9 +457,11 @@ $$
 
 &= ((a_1 + a_2)u - (b_1 + b_2)v) + i((a_1 + a_2)v + (b_1 + b_2)u) \\
 
-&= a_1u + a_2u - b_1v - b_2v + ia_1v + ia_2v + ib_1u + ib_2u \\
+&= (a_1u + a_2u - b_1v - b_2v) + i(a_1v + a_2v + b_1u + b_2u) \\
 
-&= a_1(u + iv) + a_2(u + iv) + ib_1(u + iv) + ib_2(u + iv) \\
+&= ((a_1u - b_1v) + (a_2u - b_2v)) + i((a_1v + b_1u) + (a_2v + b_2u)) \\
+
+&= ((a_1u - b_1v) + i(a_1v + b_1u)) + ((a_2u - b_2v) + i(a_2v + b_2u)) \\
 
 &= (a_1 + ib_1)(u + iv) + (a_2 + ib_2)(u + iv)
 

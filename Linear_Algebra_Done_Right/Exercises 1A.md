@@ -31,13 +31,13 @@ $$
 
 (\alpha + \beta) + \lambda
 
-&= [(x + p) + (y + q)i] + a + bi \\
+&= ((x + p) + (y + q)i) + (a + bi) \\
 
-&= (x + p) + a + [(y + q) + b]i \\
+&= ((x + p) + a) + ((y + q) + b)i \\
 
-&= x + (p + a) + [y + (q + b)]i \\
+&= (x + (p + a)) + (y + (q + b))i \\
 
-&= x + yi + [(p + a) + (q + b)i] \\
+&= (x + yi) + ((p + a) + (q + b)i) \\
 
 &= \alpha + (\beta + \lambda)
 
@@ -55,21 +55,23 @@ $$
 
 (\alpha \beta) \lambda
 
-&= [(x + yi)(p + qi)](a + bi) \\
+&= ((x + yi)(p + qi))(a + bi) \\
 
-&= (xp + xqi + ypi - yq)(a + bi) \\
+&= ((xp - yq) + (xq + yp)i)(a + bi) \\
 
-&= xpa + xpbi + xqai - xqb + ypai - ypb - yqa - yqbi \\
+&= ((xp - yq)a - (xq + yp)b) + ((xp - yq)b + (xq + yp)a)i \\
 
-&= (x + yi)pa + (x + yi)pbi + (x + yi)qai - (x + yi)qb \\
+&= ((xp)a - (yq)a - (xq)b - (yp)b) + ((xp)b - (yq)b + (xq)a + (yp)a)i \\
 
-&= (x + yi)(pa + pbi + qai - qb) \\
+&= (x(pa) - x(qb) - y(qa) - y(pb)) + (x(pb) + x(qa) - y(qb) + y(pa))i \\
 
-&= (x + yi)[(p + qi)a + (p + qi)bi] \\
+&= (x(pa - qb) - y(qa + pb)) + (x(pb + qa) + y(pa - qb))i \\
 
-&= (x + yi)[(p + qi)(a + bi)] \\
+&= (x + yi)((pa - qb) + (pb + qa)i) \\
 
-&= \alpha (\beta \lambda)
+&= (x + yi)((p + qi)(a + bi)) \\
+
+&= \alpha ((\beta \lambda))
 
 \end{aligned}
 $$
@@ -85,19 +87,21 @@ $$
 
 \lambda (\alpha + \beta)
 
-&= (a + bi)[(x + p) + (y + q)i] \\
+&= (a + bi)((x + yi) + (p + qi)) \\
 
-&= ax + ap + bxi + bpi + ay i + aqi - by - bq \\
+&= (a + bi)((x + p) + (y + q)i) \\
 
-&= (ax + ayi + bxi - by) + (ap + bpi + aqi - bq) \\
+&= (a(x + p) - b(y + q)) + (a(y + q) + b(x + p))i \\
 
-&= (ax + ayi + bxi + bi yi) + (ap + bpi + aqi + bi qi) \\
+&= (ax + ap - by - bq) + (ay + aq + bx + bp)i \\
 
-&= [a(x + yi) + bi(x + yi)] + [a(p + qi) + bi(p + qi)] \\
+&= ((ax - by) + (ap - bq)) + ((ay + bx) + (aq + bp))i \\
 
-&= [(a + bi)(x + yi)] + [(a + bi)(p + qi)] \\
+&= ((ax - by) + (ay + bx)i) + ((ap - bq) + (aq + bp)i) \\
 
-&= \lambda \alpha + \lambda \beta
+&= ((a + bi)(x + yi)) + ((a + bi)(p + qi)) \\
+
+&=\lambda \alpha + \lambda \beta
 
 \end{aligned}
 $$
@@ -106,18 +110,20 @@ $$
 
 **5. Show that for every $\alpha \in \mathbf{C}$, there exists a unique $\beta \in \mathbf{C}$ such that $\alpha + \beta = 0$.**
 
-Let $\alpha = x + yi$, where $x, y \in \mathbf{R}$, then $-x$ and $-y$ are the additive inverses of $x$ and $y$, respectively.
+Let $\alpha = x + yi$, where $x, y \in \mathbf{R}$.
 
-Let $\beta = (-x) + (-y)i$, then
+Let $\beta = (-x) + (-y)i$, where $(-x), (-y)$ are the additive inverse of $x, y$.
 
 $$
 \begin{aligned}
 
 \alpha + \beta
 
-&= x + yi + (-x) + (-y)i \\
+&= (x + yi) + ((-x) + (-y)i) \\
 
-&= [x + (-x)] + [y + (-y)]i \\
+&= (x + (-x)) + (y + (-y))i \\
+
+&= 0 + 0i \\
 
 &= 0
 
@@ -135,7 +141,7 @@ $$
 
 &= \beta + (\alpha + \beta') \\
 
-&= (\alpha + \beta) + \beta' \\
+&= (\alpha + \beta) + \beta', \text{ according to 1A.2} \\
 
 &= \beta'
 
@@ -159,7 +165,9 @@ $$
 
 &= (x + yi)(\frac{x}{x^2 + y^2} - \frac{y}{x^2 + y^2}i) \\
 
-&= \frac{x^2}{x^2 + y^2} - \frac{xy}{x^2 + y^2}i + \frac{xy}{x^2 + y^2}i + \frac{y^2}{x^2 + y^2} \\
+&= (\frac{x^2}{x^2 + y^2}  + \frac{y^2}{x^2 + y^2}) + (\frac{xy}{x^2 + y^2} - \frac{xy}{x^2 + y^2})i \\
+
+&= \frac{x^2 + y^2}{x^2 + y^2} + 0i \\
 
 &= \frac{x^2 + y^2}{x^2 + y^2} \\
 
@@ -179,7 +187,7 @@ $$
 
 &= \beta' (\alpha \beta) \\
 
-&= (\alpha \beta') \beta \\
+&= (\alpha \beta') \beta \text{, according to 1A.3} \\
 
 &= \beta
 
@@ -195,11 +203,15 @@ $$
 
 (\frac{-1 + \sqrt{3}i}{2})^3
 
-&= \frac{(-1 + \sqrt{3}i)^2 (-1 + \sqrt{3}i)}{8} \\
+&= ((-\frac{1}{2} + \frac{\sqrt{3}}{2}i)(-\frac{1}{2} + \frac{\sqrt{3}}{2}i))(-\frac{1}{2} + \frac{\sqrt{3}}{2}i)\\
 
-&= \frac{(-2 - 2\sqrt{3}i)(-1 + \sqrt{3}i)}{8} \\
+&= ((\frac{1}{4} - \frac{3}{4}) + (-\frac{\sqrt{3}}{4} - \frac{\sqrt{3}}{4})i)(-\frac{1}{2} + \frac{\sqrt{3}}{2}i) \\
 
-&= \frac{2 - 2\sqrt{3}i + 2\sqrt{3}i + 6}{8} \\
+&= (-\frac{1}{2} - \frac{\sqrt{3}}{2}i)(-\frac{1}{2} + \frac{\sqrt{3}}{2}i) \\
+
+&= (\frac{1}{4} + \frac{3}{4}) + (-\frac{\sqrt{3}}{4} + \frac{\sqrt{3}}{4})i \\
+
+&= 1 + 0i \\
 
 &= 1
 
@@ -212,9 +224,21 @@ $$
 
 Let $(a + bi)^2 = i$, where $a, b \in \mathbf{R}$, then
 
-$$(a + bi)^2 - i = (a^2 - b^2)+ (2ab - 1)i = 0$$
+$$
+\begin{aligned}
 
-We have $a^2 = b^2$ and $2ab = 1$.
+(a + bi)^2 - i
+
+&= ((a^2 - b^2) + 2abi) + (0 - 1i) \\
+
+&= (a^2 - b^2) + (2ab - 1)i \\
+
+&= 0
+
+\end{aligned}
+$$
+
+Then, $a^2 = b^2$ and $2ab = 1$.
 
 Let $a = b$, then $a = b = \frac{1}{\sqrt{2}}$, means $z_1 = \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{2}}i$ is a square root of $i$.
 
@@ -258,32 +282,50 @@ Hence, $x = (\frac{1}{2}, 6, -\frac{7}{2}, \frac{1}{2}).$
 
 ---
 
-**10. Explain why there does not exist $\lambda \in \mathbf{C}$ such that $\lambda (2 - 3i, 5 + 4i, -6 + 7i) = (12 - 5i, 7 + 22i, -32 - 9i)$.**
+**10. Explain why there does not exist $\lambda \in \mathbf{C}$ such that $$\lambda (2 - 3i, 5 + 4i, -6 + 7i) = (12 - 5i, 7 + 22i, -32 - 9i)$$**
 
-Assume there exists a $\lambda \in \mathbf{C}$, then
+Assume there exists a $\lambda = x + yi$, where $x, y \in \mathbf{R}$, then
+
+$$
+\begin{align}
+
+\lambda (2 - 3i) &= 12 - 5i \\
+
+\lambda (5 + 4i) &= 7 + 22i \\
+
+\lambda (-6 + 7i) &= -32 - 9i
+
+\end{align}
+$$
+
+Solve equation $(1)$:
 
 $$
 \begin{aligned}
 
-\lambda (2 - 3i) &= 12 - 5i \\
-
-\lambda &= \frac{12 - 5i}{2 - 3i} \\
-
-\lambda &= \frac{(12 - 5i)(2 + 3i)}{(2 - 3i)(2 + 3i)} \\
-
-\lambda &= \frac{39 + 26i}{13} \\
-
-\lambda &= 3 + 2i
+\lambda (2 - 3i) = (2x + 3y) + (-3x + 2y) = 12 - 5i
 
 \end{aligned}
 $$
 
-However,
+We have $x = 3$ and $y = 2$.
+
+Equation $(2)$ holds true, because
 
 $$
 \begin{aligned}
 
-\lambda (-6 + 7i) &= (3 + 2i)(-6 + 7i) = -32 + 9i \neq -32 - 9i
+\lambda (5 + 4i) = (3 + 2i)(5 + 4i) = (15 - 8) + (12 + 10)i = 7 + 22i
+
+\end{aligned}
+$$
+
+However, equation $(3)$  is not satisfied, because
+
+$$
+\begin{aligned}
+
+\lambda (-6 + 7i) = (3 + 2i)(-6 + 7i) = -32 + 9i \neq -32 - 9i
 
 \end{aligned}
 $$
@@ -340,7 +382,7 @@ $$
 Let $x = (x_1, ..., x_n)$, where $x_i \in \mathbf{F}$ for $i = 1, 2, ..., n$, then
 
 $$
-1x = 1(x_1, ..., x_n) = (x_1, ..., x_n) = x
+1x = 1(x_1, ..., x_n) = (1x_1, ..., 1x_n) = (x_1, ..., x_n) = x
 $$
 
 ---
@@ -355,6 +397,8 @@ $$
 \lambda(x + y)
 
 &= \lambda (x_1 + y_1, ..., x_n + y_n) \\
+
+&= (\lambda (x_1 + y_1), ..., \lambda (x_n + y_n)) \\
 
 &= (\lambda x_1 + \lambda y_1, ..., \lambda x_n + \lambda y_n) \\
 
@@ -383,6 +427,8 @@ $$
 &= (ax_1 + bx_1, ..., ax_n + bx_n) \\
 
 &= (ax_1, ..., ax_n) + (bx_1, ..., bx_n) \\
+
+&= a(x_1, ..., x_n) + b(x_1, ..., x_n) \\
 
 &= ax + bx
 
